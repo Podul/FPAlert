@@ -1,0 +1,16 @@
+PODS:
+  - FPAlert (0.1.0)
+
+DEPENDENCIES:
+  - FPAlert (from `../`)
+
+EXTERNAL SOURCES:
+  FPAlert:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FPAlert: b4e541c3a65efe98385e04b466a989c4bac3002d
+
+PODFILE CHECKSUM: d8ac0ade573e8e7f24522ca1f4f2cd1742a982b3
+
+COCOAPODS: 1.7.1

@@ -1,0 +1,6 @@
+framework module FPAlert {
+  umbrella header "FPAlert-umbrella.h"
+
+  export *
+  module * { export * }
+}
