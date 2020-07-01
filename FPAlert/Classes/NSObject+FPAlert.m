@@ -141,7 +141,6 @@
 }
 
 #pragma mark Private
-static UIWindow *_oldKeyWindow = nil;
 + (UIViewController *)rootVC {
     static UIViewController *_rootVC = nil;
     if (_rootVC == nil) {
@@ -163,13 +162,11 @@ static UIWindow *_oldKeyWindow = nil;
 }
 
 + (void)showWindow {
-    _oldKeyWindow = UIApplication.sharedApplication.keyWindow;
-    [[self alertWindow] makeKeyAndVisible];
+    [[self alertWindow] setHidden:NO];
 }
 
 + (void)hideWindow {
     [[self alertWindow] setHidden:YES];
-    [_oldKeyWindow makeKeyWindow];
 }
 
 + (void)showAlertController:(UIAlertController *)alertVC {
@@ -190,7 +187,7 @@ static UIWindow *_oldKeyWindow = nil;
 
 
 #pragma mark - UIAlertController
-@implementation UIAlertController (FPAlert)
+@implementation NSObject (FPAlert)
 
 + (FPAlert *)alert {
     FPAlert *fpAlert = [[FPAlert alloc] init];
@@ -198,43 +195,24 @@ static UIWindow *_oldKeyWindow = nil;
     return fpAlert;
 }
 
-+ (FPAlert *)actionSheet {
-    FPAlert *fpAlert = [[FPAlert alloc] init];
-    fpAlert.style = UIAlertControllerStyleActionSheet;
-    return fpAlert;
+- (FPAlert *)alert {
+    return [self.class alert];
 }
 
-+ (FPAlert * _Nonnull (^)(UIView * _Nonnull))actionSheet1 {
-    return ^id(UIView *sourceView) {
-        FPAlert *alert = [self actionSheet];
-        alert.sourceView = sourceView;
-        return alert;
-    };
-}
-
-+ (FPAlert * _Nonnull (^)(UIBarButtonItem * _Nonnull))actionSheet2 {
-    return ^id(UIBarButtonItem *barButtonItem) {
-        FPAlert *alert = [self actionSheet];
-        alert.barButtonItem = barButtonItem;
-        return alert;
-    };
-}
-
-+ (FPAlert * _Nonnull (^)(UIView * _Nonnull, CGRect))actionSheet3 {
-    return ^id(UIView *sourceView, CGRect sourceRect) {
-        FPAlert *alert = [self actionSheet];
-        alert.sourceView = sourceView;
++ (FPAlert * _Nonnull (^)(id<ActionSheetViewProtocol> _Nonnull, CGRect))actionSheet {
+    return ^FPAlert *(id<ActionSheetViewProtocol> item, CGRect sourceRect) {
+        FPAlert *alert = [[FPAlert alloc] init];
+        if ([item isKindOfClass:UIView.class]) {
+            alert.sourceView = (UIView *)item;
+        }else {
+            alert.barButtonItem = (UIBarButtonItem *)item;
+        }
         alert.sourceRect = sourceRect;
         return alert;
     };
 }
 
-+ (FPAlert * _Nonnull (^)(UIBarButtonItem * _Nonnull, CGRect))actionSheet4 {
-    return ^id(UIBarButtonItem *barButtonItem, CGRect sourceRect) {
-        FPAlert *alert = [self actionSheet];
-        alert.barButtonItem = barButtonItem;
-        alert.sourceRect = sourceRect;
-        return alert;
-    };
+- (FPAlert * _Nonnull (^)(id<ActionSheetViewProtocol> _Nonnull, CGRect))actionSheet {
+    return [self.class actionSheet];
 }
 @end

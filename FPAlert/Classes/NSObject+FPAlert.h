@@ -6,7 +6,9 @@
 //  Copyright © 2019 Geetol. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/NSObject.h>
+#import <UIKit/UIView.h>
+#import <UIKit/UIBarButtonItem.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -30,18 +32,30 @@ typedef void(^FPAlertTextFieldHandler)(UITextField *);
 @end
 
 
-#pragma UIAlertController Category
-@interface UIAlertController (FPAlert)
+#pragma mark - UIAlertController Category
+@protocol ActionSheetViewProtocol;
+
+@interface NSObject (FPAlert)
 
 /// UIAlertControllerStyleAlert
 + (FPAlert *)alert;
+- (FPAlert *)alert;
 
 /// UIAlertControllerStyleActionSheet
-+ (FPAlert *)actionSheet;
-+ (FPAlert * (^)(UIView *))actionSheet1;
-+ (FPAlert * (^)(UIBarButtonItem *))actionSheet2;
-+ (FPAlert * (^)(UIView *, CGRect))actionSheet3;
-+ (FPAlert * (^)(UIBarButtonItem *, CGRect))actionSheet4;
++ (FPAlert * (^)(id<ActionSheetViewProtocol>, CGRect) )actionSheet;
+- (FPAlert * (^)(id<ActionSheetViewProtocol>, CGRect) )actionSheet;
+@end
+
+#pragma mark - Protocol
+@protocol ActionSheetViewProtocol <NSObject>
+@end
+
+@interface UIView ()<ActionSheetViewProtocol>
+
+@end
+
+@interface UIBarButtonItem ()<ActionSheetViewProtocol>
+
 @end
 
 NS_ASSUME_NONNULL_END

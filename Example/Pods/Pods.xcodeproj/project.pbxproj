@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		070D48F5961107BC20E63FD6FC2F3E46 /* Pods-FPAlert_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4DFB266DB806E6070326A8D0C47DD8 /* Pods-FPAlert_Example-dummy.m */; };
-		3455D0DBDECF17534C4A7C46B1DC41B2 /* UIAlertController+FPAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 6867E685C53F21859A3F7683CD4B3B64 /* UIAlertController+FPAlert.m */; };
-		A2C4D52A7B800B22FE2D37C021234C21 /* UIAlertController+FPAlert.h in Headers */ = {isa = PBXBuildFile; fileRef = 18081047241AB46A50B6D78DA963A374 /* UIAlertController+FPAlert.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3455D0DBDECF17534C4A7C46B1DC41B2 /* NSObject+FPAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 6867E685C53F21859A3F7683CD4B3B64 /* NSObject+FPAlert.m */; };
+		A2C4D52A7B800B22FE2D37C021234C21 /* NSObject+FPAlert.h in Headers */ = {isa = PBXBuildFile; fileRef = 18081047241AB46A50B6D78DA963A374 /* NSObject+FPAlert.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6106867DF3DAFD8F0FD81AA05701526 /* FPAlert-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 76F09E81CADBC359EC7E0E64D5CCA535 /* FPAlert-dummy.m */; };
 		A9663FE31D866BF08FE727A829AC5CF9 /* FPAlert-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 01DC393F9AD138B4F15108E2FCCA57D7 /* FPAlert-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B9109223FDA7C0EE99A14850AEAE83F4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
@@ -42,7 +42,7 @@
 		01DC393F9AD138B4F15108E2FCCA57D7 /* FPAlert-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FPAlert-umbrella.h"; sourceTree = "<group>"; };
 		11418ACE37C2FFE7F72E5A856A436322 /* Pods-FPAlert_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FPAlert_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		15E85EAD76AEB5B4342A3D959E24A793 /* Pods-FPAlert_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FPAlert_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		18081047241AB46A50B6D78DA963A374 /* UIAlertController+FPAlert.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIAlertController+FPAlert.h"; path = "FPAlert/Classes/UIAlertController+FPAlert.h"; sourceTree = "<group>"; };
+		18081047241AB46A50B6D78DA963A374 /* NSObject+FPAlert.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+FPAlert.h"; path = "FPAlert/Classes/NSObject+FPAlert.h"; sourceTree = "<group>"; };
 		1CE5BE25698778ABEF3F89442CE56DC3 /* Pods-FPAlert_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FPAlert_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		1CE7D19A300F02CFC050D2637C18847D /* FPAlert.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FPAlert.xcconfig; sourceTree = "<group>"; };
 		1EAB59A931BBC74172558E29B6AEDD2B /* Pods-FPAlert_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FPAlert_Example-frameworks.sh"; sourceTree = "<group>"; };
@@ -50,7 +50,7 @@
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		3AD33EA06E3FA6462F7CE86C1C4CFE27 /* Pods-FPAlert_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FPAlert_Example-Info.plist"; sourceTree = "<group>"; };
 		60C3EB6385273226796ED8CAA772D0F7 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		6867E685C53F21859A3F7683CD4B3B64 /* UIAlertController+FPAlert.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIAlertController+FPAlert.m"; path = "FPAlert/Classes/UIAlertController+FPAlert.m"; sourceTree = "<group>"; };
+		6867E685C53F21859A3F7683CD4B3B64 /* NSObject+FPAlert.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+FPAlert.m"; path = "FPAlert/Classes/NSObject+FPAlert.m"; sourceTree = "<group>"; };
 		6C99F0C1EDA4F5109F4BAC555614565C /* Pods-FPAlert_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FPAlert_Tests.modulemap"; sourceTree = "<group>"; };
 		76F09E81CADBC359EC7E0E64D5CCA535 /* FPAlert-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FPAlert-dummy.m"; sourceTree = "<group>"; };
 		78D24302F5E3FF247E4AB0D8FC8BFE5A /* Pods-FPAlert_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FPAlert_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -107,8 +107,8 @@
 			isa = PBXGroup;
 			children = (
 				8208CF53C5DE56005C15380633BAA71C /* FPAlert.h */,
-				18081047241AB46A50B6D78DA963A374 /* UIAlertController+FPAlert.h */,
-				6867E685C53F21859A3F7683CD4B3B64 /* UIAlertController+FPAlert.m */,
+				18081047241AB46A50B6D78DA963A374 /* NSObject+FPAlert.h */,
+				6867E685C53F21859A3F7683CD4B3B64 /* NSObject+FPAlert.m */,
 				389FA0A93E4E40E9EAA6660E9FA97612 /* Pod */,
 				2C9A0A28DFACDE2074E7C4AADA6300E3 /* Support Files */,
 			);
@@ -252,7 +252,7 @@
 			files = (
 				A9663FE31D866BF08FE727A829AC5CF9 /* FPAlert-umbrella.h in Headers */,
 				D43AF1853BC0157BF8AE72659DF6B9C8 /* FPAlert.h in Headers */,
-				A2C4D52A7B800B22FE2D37C021234C21 /* UIAlertController+FPAlert.h in Headers */,
+				A2C4D52A7B800B22FE2D37C021234C21 /* NSObject+FPAlert.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +330,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
 			productRefGroup = 732E6CD8B04073788B4347B037293344 /* Products */;
@@ -381,7 +382,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6106867DF3DAFD8F0FD81AA05701526 /* FPAlert-dummy.m in Sources */,
-				3455D0DBDECF17534C4A7C46B1DC41B2 /* UIAlertController+FPAlert.m in Sources */,
+				3455D0DBDECF17534C4A7C46B1DC41B2 /* NSObject+FPAlert.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

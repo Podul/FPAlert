@@ -10,7 +10,7 @@
 #import <FPAlert.h>
 
 @interface FPViewController ()
-
+@property (nonatomic, strong) UIView *aView;
 @end
 
 @implementation FPViewController
@@ -19,11 +19,16 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    _aView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 200, 100)];
+    _aView.backgroundColor = UIColor.redColor;
+    [self.view addSubview:_aView];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    UIAlertController
-    .alert
+    
+    self
+    .actionSheet(_aView, _aView.bounds)
     .title(@"title")
     .message(@"message")
     .cancel(@"Cancel", ^(UIAlertAction *action) {
